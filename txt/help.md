@@ -1,5 +1,5 @@
-# About
+# Help
 
-À compléter: contenu de la page ABOUT.
+À compléter: contenu de la page HELP.
 
-cf. https://github.com/oblique-strategies/oblique-strategies.github.io/issues/2
+cf. https://github.com/oblique-strategies/oblique-strategies.github.io/issues/7
