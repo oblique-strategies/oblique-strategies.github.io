@@ -12,16 +12,15 @@ Oblique Strategies est un set de cartes “divinatoires”, créé en 1975 par l
 
 Quelques images:
 
-<li>
-  samanthatrinkler.com <br>
-slmn.ch<br>
-mailysdut.ch<br>
-natwintsch.com<br>
-makob.ch<br>
-davidehrens.com<br>
-mvolet.ch<br>
-teodolci.ch<br>
-alter-egaux.ch<br>
-skberry.ch<br>
-nelsonft.com<br>
+<li>samanthatrinkler.com <br>
+<li>slmn.ch<br>
+<li>mailysdut.ch<br>
+<li>natwintsch.com<br>
+<li>makob.ch<br>
+<li>davidehrens.com<br>
+<li>mvolet.ch<br>
+<li>teodolci.ch<br>
+<li>alter-egaux.ch<br>
+<li>skberry.ch<br>
+<li>nelsonft.com<br>
   </li> 
