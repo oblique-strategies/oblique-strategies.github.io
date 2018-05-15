@@ -7,6 +7,6 @@ img	{
 	display: flex;
 }
 
-.section {
+section {
 	flex: 1 1;
 }
