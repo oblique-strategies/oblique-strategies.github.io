@@ -14,7 +14,7 @@
 				var path = new Path.Circle({
 					center: [0, 0],
 					radius: 25	,
-					fillColor: 'blue',
+					fillColor: '#4f12b1',
 					/*strokeColor: 'black'*/
 				});
 
@@ -51,6 +51,35 @@
 				</script>
 
 				<style>
+
+				.button {
+    background-color:  rgba(255,255,255,0);
+    border: solid;
+		border-width: 6px;
+    color: white;
+    padding: 35px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		font-size: 50px;
+		position: absolute;
+		right: 450px;
+		bottom: 300px;
+
+
+}
+
+.button:hover
+{
+				background-color:  rgba(255,255,255,0.5);
+        transform: scale(1.1);
+
+				color: #4f12b1;
+}
+
+
+
+
 				body{
 					/*background-color: pink;*/
 					height: 100vh;
@@ -68,8 +97,11 @@
 
     <body>
 
-			<h1> Stratagèmes obliques </h1>
 				<canvas id="myCanvas" resize></canvas>
 				<script > </script>
+				<!-- <input type="button" class="button" value="Stratagèmes obliques" OnClick=".'"window.location='.'"carte.html" /> -->
+				<a class="button" href="carte.html">Stratagèmes obliques</a>
+
+>
     </body>
 </html>
