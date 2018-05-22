@@ -52,12 +52,6 @@ img	{
 	max-height: 100vh
 }
 
-.champ {
-	flex: 1 1;
-	margin: auto;
-	text-align: center;
-	vertical-align: middle;
-}
 
 .image {
 	background-color: yellow;
