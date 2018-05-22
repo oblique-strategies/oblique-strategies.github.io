@@ -1,4 +1,16 @@
+img	{
+	height: 75vh;
+}
+
+
 @media screen and (min-width: 600px) {
+
+
+	img	{
+		height: 100vh;
+	}
+
+
 
   html {
    font-size: 1.4em; /* rendre les polices plus petites pour mobile */
@@ -16,6 +28,72 @@
 	section {
 		flex: 1 1;
 	}
+
+
+}
+
+@media screen and (min-width: 1000px) {
+
+html {
+ font-size: 1.8em; /* rendre les polices plus petites pour mobile */
+}
+
+p {
+
+}
+
+
+.carte {
+	display: flex;
+}
+
+section {
+	flex: 1 1;
+}
+
+
+}
+
+@media screen and (min-width: 1400px) {
+
+html {
+ font-size: 2.2em; /* rendre les polices plus petites pour mobile */
+}
+
+p {
+
+}
+
+
+.carte {
+	display: flex;
+}
+
+section {
+	flex: 1 1;
+}
+
+
+}
+
+@media screen and (min-width: 1900px) {
+
+html {
+ font-size: 2.2em; /* rendre les polices plus petites pour mobile */
+}
+
+p {
+
+}
+
+
+.carte {
+	display: flex;
+}
+
+section {
+	flex: 1 1;
+}
 
 
 }
