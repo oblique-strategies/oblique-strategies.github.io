@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <title>Oblique Strategies</title>
+				<link rel="stylesheet" href="css/style.css">
+				<link rel="stylesheet" href="css/menu.css">
+				<link rel="stylesheet" href="css/responsive.css">
 				<script type="text/javascript" src="javascript/paper-full.min.js"></script>
 
 				<script type="text/paperscript" canvas="myCanvas">
@@ -98,10 +101,18 @@
     <body>
 
 				<canvas id="myCanvas" resize></canvas>
-				<script > </script>
 				<!-- <input type="button" class="button" value="Stratagèmes obliques" OnClick=".'"window.location='.'"carte.html" /> -->
-				<a class="button" href="carte.html">Stratagèmes obliques</a>
+				<a id="start" class="button" href="carte.html">Stratagèmes obliques</a>
 
->
+
     </body>
+		<script >
+		var startButton = document.getElementById('start');
+    startButton.addEventListener('click', tirerCarte(), false);
+
+		function tirerCarte() {
+			alert ("ça marche");
+
+		}
+		</script>
 </html>
