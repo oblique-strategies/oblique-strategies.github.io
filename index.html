@@ -94,17 +94,24 @@
     <body>
 
 				<canvas id="myCanvas" resize></canvas>
-				<!-- <input type="button" class="button" value="Stratagèmes obliques" OnClick=".'"window.location='.'"carte.html" /> -->
-				<a id="start" class="button" href="carte.html">Stratagèmes obliques</a>
 
+				<a id="start" class="button" href="carte.html">Stratagèmes obliques</a>
 
     </body>
 		<script >
 		var startButton = document.getElementById('start');
-    startButton.addEventListener('click', tirerCarte(), false);
+
+    startButton.addEventListener('click', tirerCarte, false);
 
 		function tirerCarte() {
-			alert ("ça marche");
+
+			setTimeout(function(){
+
+				window.location="carte.html";
+			
+			}, 2000);
+
+			event.preventDefault();
 
 		}
 		</script>
