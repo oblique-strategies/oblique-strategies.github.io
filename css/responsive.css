@@ -1,0 +1,21 @@
+@media screen and (min-width: 600px) {
+
+  html {
+   font-size: 1.2em; /* rendre les polices plus petites pour mobile */
+  }
+
+  p {
+
+  }
+
+
+	.carte {
+		display: flex;
+	}
+
+	section {
+		flex: 1 1;
+	}
+
+
+}
