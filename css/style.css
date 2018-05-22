@@ -1,4 +1,68 @@
+/* Typographie
+....................................................................................
+ */
+
+@font-face {
+font-family: 'sangbleu empire';
+font-weight: bold;
+src: url('http://mailysdut.ch/fonts/sangbleu/Empire-Bold-WebS.woff2') format('woff2'),
+	 url('http://mailysdut.ch/fonts/sangbleu/Empire-Bold-WebS.woff') format('woff');
+}
+
+@font-face {
+font-family: 'sangbleu empire';
+font-weight: normal;
+src: url('http://mailysdut.ch/fonts/sangbleu/Empire-Medium-WebS.woff2') format('woff2'),
+url('http://mailysdut.ch/fonts/sangbleu/Empire-Medium-WebS.woff') format('woff');
+}
+
+@font-face {
+font-family: 'sangbleu sunrise';
+font-weight: normal;
+src: url('http://mailysdut.ch/fonts/sangbleu/Sunrise-Livre-WebS.woff2') format('woff2'),
+url('http://mailysdut.ch/fonts/sangbleu/Sunrise-Livre-WebS.woff') format('woff');
+}
+
+
+h1, h2 {
+	font-family: "sangbleu empire", helvetica, sans-serif;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+body, p {
+	font-family: "sangbleu sunrise", helvetica, sans-serif;
+}
+
+/* éléments de base
+....................................................................................
+ */
+
 img	{
 	object-fit: contain;
-	max-width: 100%
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
+}
+
+.carte {
+	display: flex;
+	max-height: 100vh
+}
+
+.champ {
+	flex: 1 1;
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.image {
+	background-color: yellow;
+}
+
+.texte {
+	background-color: green;
 }
