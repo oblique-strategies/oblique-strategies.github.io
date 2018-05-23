@@ -11,14 +11,13 @@ img	{
 	}
 
 
+	html {
+	 font-size: 1.4em; /* rendre les polices plus petites pour mobile */
+	}
 
-  html {
-   font-size: 1.4em; /* rendre les polices plus petites pour mobile */
-  }
+	p {
 
-  p {
-
-  }
+	}
 
 
 	.carte {
@@ -34,66 +33,66 @@ img	{
 
 @media screen and (min-width: 1000px) {
 
-html {
- font-size: 1.8em; /* rendre les polices plus petites pour mobile */
-}
+	html {
+	 font-size: 1.8em; /* rendre les polices plus petites pour mobile */
+	}
 
-p {
+	p {
 
-}
+	}
 
 
-.carte {
-	display: flex;
-}
+	.carte {
+		display: flex;
+	}
 
-section {
-	flex: 1 1;
-}
+	section {
+		flex: 1 1;
+	}
 
 
 }
 
 @media screen and (min-width: 1400px) {
 
-html {
- font-size: 2.2em; /* rendre les polices plus petites pour mobile */
-}
+	html {
+	 font-size: 2.2em; /* rendre les polices plus petites pour mobile */
+	}
 
-p {
+	p {
 
-}
+	}
 
 
-.carte {
-	display: flex;
-}
+	.carte {
+		display: flex;
+	}
 
-section {
-	flex: 1 1;
-}
+	section {
+		flex: 1 1;
+	}
 
 
 }
 
 @media screen and (min-width: 1900px) {
 
-html {
- font-size: 2.2em; /* rendre les polices plus petites pour mobile */
-}
+	html {
+	 font-size: 2.2em; /* rendre les polices plus petites pour mobile */
+	}
 
-p {
+	p {
 
-}
+	}
 
 
-.carte {
-	display: flex;
-}
+	.carte {
+		display: flex;
+	}
 
-section {
-	flex: 1 1;
-}
+	section {
+		flex: 1 1;
+	}
 
 
 }
