@@ -78,38 +78,6 @@
 				</main>
 		</div>
     </body>
-		<script>
+			<script src="javascript/javascript.js"></script>
 		
-		var startButton = document.getElementById('start');
-
-		startButton.addEventListener('click', tirerCarte, false);
-
-		function tirerCarte() {
-
-			var myCanvas = document.getElementById('myCanvas');
-			var intro    = document.getElementById('intro');
-			var frame    = document.getElementById('frame');
-
-				// 1) Rendre transparente l'animation
-								
-				myCanvas.className += " transparent";
-				
-				setTimeout(function() {
-				
-					// 2) Faire disparaître l'animation
-
-					intro.style.left = "100vw";
-
-					// 3) Faire apparaître le contenu
-
-					frame.style.right = "0vw";
-
-				}, 1000);
-
-       	event.preventDefault();
-
-		} // fin de function tirerCarte()
-
-
-		</script>
 </html>
