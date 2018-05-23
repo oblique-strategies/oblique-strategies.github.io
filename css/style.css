@@ -98,7 +98,7 @@ ul {
 	transition: opacity 1s ease-in-out;
 }
 
-#myCanvas.transparent {
+.transparent {
  opacity : 0;
 }
 
