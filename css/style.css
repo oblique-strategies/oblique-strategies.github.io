@@ -53,7 +53,11 @@ img	{
 	margin: auto;
 }
 
-
+ul {
+	margin: 0;
+	list-style: none;
+	display: flex;
+}
 
 .image {
 	background-color: yellow;
