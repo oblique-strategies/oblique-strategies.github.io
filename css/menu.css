@@ -2,3 +2,15 @@
 	background-color: red;
  	text-align: right;
 }
+
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-right: 1em;
+  padding: 0.5em 0;
+}
