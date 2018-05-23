@@ -20,13 +20,9 @@ function premiereCarte() {
 	
 	setTimeout(function() {
 	
-		// Faire disparaître l'animation
+		intro.style.left = "100vw"; // Fait disparaître l'animation
 
-		intro.style.left = "100vw";
-
-		// Faire apparaître le contenu
-
-		frame.style.right = "0vw";
+		frame.style.right = "0vw"; // Fait apparaître le contenu
 
 	}, 1000);
 
