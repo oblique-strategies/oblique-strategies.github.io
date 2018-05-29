@@ -1,13 +1,18 @@
 .menu {
-	background-color: white;
  	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height:100%
 }
 
 .menu ul {
   display: flex;
-  justify-content: flex-end;
+	flex-direction: column;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
+	height: 100%
 }
 
 .menu ul li {
