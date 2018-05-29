@@ -18,7 +18,7 @@ var cards = [
 		["DaRo_cartes16.jpg","La frustration est un signe de qualité"],
 		["DaRo_cartes17.jpg","Pile ou face?"],
 		["DaRo_cartes18.jpg","Prends un grand verre d'eau"],
-		["DaRo_cartes19.jpg","Tourne le à l'envers"],
+		["DaRo_cartes19.jpg","Tourne-le à l'envers"],
 		["DaRo_cartes20.jpg","Tu es à un trait de la solution"],
 
 //Groupe MaLaNe
@@ -37,7 +37,7 @@ var cards = [
 	  ["cartes-illustrations_Page_13.jpg","Écoute ta musique préférée"],
 		["cartes-illustrations_Page_14.jpg","Fais sortir les éléments du cadre"],
 		["cartes-illustrations_Page_15.jpg","Inspire-toi du Bauhaus"],
-		["cartes-illustrations_Page_16.jpg","Inspire-toi de l’art préhistorique"],
+		["cartes-illustrations_Page_16.jpg","Inspire-toi de l’art pré&shy;historique"],
 		["cartes-illustrations_Page_17.jpg","Inspire-toi du Constructivisme"],
 		["cartes-illustrations_Page_18.jpg","Inspire-toi du Memphis style"],
 		["cartes-illustrations_Page_19.jpg","Inspire-toi du Surréalisme"],
