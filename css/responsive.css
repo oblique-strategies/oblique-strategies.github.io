@@ -15,12 +15,7 @@ p {
 
 
 	html {
-	 font-size: 1.4em; /* rendre les polices plus petites pour mobile */
-	}
-
-	p {
-		font-size: 2em;
-
+	 font-size: 1.2em; 
 	}
 
 	/*
@@ -36,6 +31,15 @@ p {
 		flex: 1 1;
 	}
 
+
+}
+
+@media screen and (min-width: 800px) {
+	
+	html {
+	 font-size: 1.6em; 
+	}
+	
 
 }
 
