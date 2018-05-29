@@ -60,11 +60,15 @@ ul {
 }
 
 .image {
-	background-color: yellow;
+	background-color: white;
 }
 
 .texte {
-	background-color: green;
+	background-color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 /* Intro - écran de démarrage
