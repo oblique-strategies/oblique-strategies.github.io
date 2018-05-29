@@ -59,6 +59,7 @@ function tirerCarte() {
 	// var randomNumber = getRandom(0,cardNumber);
 
 	document.getElementById('phrase').innerHTML = cards[cardNumber][1];
+	document.getElementById("illustration").src = "img/"+cards[cardNumber][0];
 
 	cardNumber++;
 

@@ -2,6 +2,10 @@ img	{
 	height: 75vh;
 }
 
+p {
+	font-size: 2em;
+
+}
 
 @media screen and (min-width: 600px) {
 
@@ -16,6 +20,7 @@ img	{
 	}
 
 	p {
+		font-size: 2em;
 
 	}
 
@@ -38,18 +43,9 @@ img	{
 	}
 
 	p {
+	 font-size: 3em;
 
 	}
-
-
-	.carte {
-		display: flex;
-	}
-
-	section {
-		flex: 1 1;
-	}
-
 
 }
 
@@ -63,16 +59,6 @@ img	{
 
 	}
 
-
-	.carte {
-		display: flex;
-	}
-
-	section {
-		flex: 1 1;
-	}
-
-
 }
 
 @media screen and (min-width: 1900px) {
@@ -82,17 +68,8 @@ img	{
 	}
 
 	p {
+	 font-size: 3em;
 
 	}
-
-
-	.carte {
-		display: flex;
-	}
-
-	section {
-		flex: 1 1;
-	}
-
 
 }
