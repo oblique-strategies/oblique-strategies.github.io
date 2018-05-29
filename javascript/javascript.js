@@ -40,16 +40,35 @@ var cards = [
 	"Noir et blanc"
 ];
 
+var cardNumber = 0;
+
 function getRandom(min , max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function shuffle(a) {
+	for (let i = a.length; i; i--) {
+		let j = Math.floor(Math.random() * i);
+		[a[i - 1], a[j]] = [a[j], a[i - 1]];
+	}
+}
+
+shuffle(cards);
+
 function tirerCarte() {
 	
 	// Déterminer le nombre de phrases
-	var cardNumber = cards.length - 1;
+	// var cardNumber = cards.length - 1;
+
+	// définir le moment du tirage
+	// dernierTirage = time();
+
 
 	// Choix de la phrase
-	var randomNumber = getRandom(0,cardNumber);
-	document.getElementById('phrase').innerHTML = cards[randomNumber];
+	// var randomNumber = getRandom(0,cardNumber);
+
+	document.getElementById('phrase').innerHTML = cards[cardNumber];
+
+	cardNumber++; 
+
 }
