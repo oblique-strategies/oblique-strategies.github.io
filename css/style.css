@@ -71,6 +71,12 @@ ul {
 	justify-content: center;
 }
 
+a,
+a:visited,
+.texte {
+	color: #4f12b1;
+}
+
 /* Intro - écran de démarrage
 ....................................................................................
  */
