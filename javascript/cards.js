@@ -53,10 +53,25 @@ var cards = [
 	  ["nomdufichier.jpg","Noir et blanc"],
 
 //Groupe SoMa
-	  ["nomdufichier.jpg","Demain"],
-	  ["nomdufichier.jpg","Sirop de framboise"],
-	  ["nomdufichier.jpg","La réponse se trouve au plafond"],
-	  ["nomdufichier.jpg","Inspire toi de la météo"],
-	  ["nomdufichier.jpg","Noir et blanc"],
+	  ["SoMa_01.jpg","Ne complique pas les choses"],
+	  ["SoMa_02.jpg","Inspire toi de la météo"],
+	  ["SoMa_03.jpg","Mets de la vie dans ton projet "],
+	  ["SoMa_04.jpg","Exprime l’harmonie"],
+	  ["SoMa_05.jpg","Crois en ta première"],
+		["SoMa_06.jpg","N’aie pas peur des clichés"],
+	  ["SoMa_07.jpg","Ose les interdits"],
+	  ["SoMa_08.jpg","Change d’univers graphique"],
+	  ["SoMa_09.jpg","Laisse reposer ton design et reviens dans 3 jours"],
+	  ["SoMa_10.jpg","Sors des tendances"],
+		["SoMa_11.jpg","Dans l’obscurité totale"],
+	  ["SoMa_12.jpg","Copie pour apprendre"],
+	  ["SoMa_13.jpg","Imagine une chenille en mouvement"],
+	  ["SoMa_14.jpg","Reviens sur ton design"],
+	  ["SoMa_15.jpg","Confronte toi aux avis extérieurs"],
+		["SoMa_16.jpg","Visite une exposition"],
+	  ["SoMa_17.jpg","Ne sois pas trop illustratif"],
+	  ["SoMa_18.jpg","Déforme ta typographie"],
+	  ["SoMa_19.jpg","Demande à ta maman"],
+	  ["SoMa_20.jpg","Déplace tout de 2 cm"],
 
-];
+	];
