@@ -13,13 +13,13 @@ function premiereCarte() {
 	tirerCarte();
 
 	// Rendre transparente l'animation
-					
+
 	myCanvas.className += " transparent";
 
 	// Ce qui suit va se produire après un délai de 1000 millisecondes.
-	
+
 	setTimeout(function() {
-	
+
 		intro.style.left = "100vw"; // Fait disparaître l'animation
 
 		frame.style.right = "0vw"; // Fait apparaître le contenu
@@ -30,15 +30,6 @@ function premiereCarte() {
 
 } // fin de premiereCarte()
 
-
-//array = liste d'éléments
-var cards = [
-	"Demain",
-	"Sirop de framboise",
-	"La réponse se trouve au plafond",
-	"Inspire toi de la météo",
-	"Noir et blanc"
-];
 
 var cardNumber = 0;
 
@@ -56,7 +47,7 @@ function shuffle(a) {
 shuffle(cards);
 
 function tirerCarte() {
-	
+
 	// Déterminer le nombre de phrases
 	// var cardNumber = cards.length - 1;
 
@@ -67,8 +58,8 @@ function tirerCarte() {
 	// Choix de la phrase
 	// var randomNumber = getRandom(0,cardNumber);
 
-	document.getElementById('phrase').innerHTML = cards[cardNumber];
+	document.getElementById('phrase').innerHTML = cards[cardNumber][1];
 
-	cardNumber++; 
+	cardNumber++;
 
 }
