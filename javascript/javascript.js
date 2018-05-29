@@ -1,3 +1,13 @@
+/*
+ * Animation de l'intro
+....................................................................................
+*/
+
+/*
+ * Pour des détails sur le fonctionnement des animations, voir:
+ * https://github.com/oblique-strategies/oblique-strategies.github.io/issues/1
+*/
+
 var startButton = document.getElementById('start');
 
 startButton.addEventListener('click', premiereCarte, false);
@@ -31,11 +41,12 @@ function premiereCarte() {
 } // fin de premiereCarte()
 
 
-var cardNumber = 0;
+/*
+ * Tirage des cartes
+....................................................................................
+*/
 
-function getRandom(min , max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+var cardNumber = 0;
 
 function shuffle(a) {
 	for (let i = a.length; i; i--) {
@@ -54,9 +65,7 @@ function tirerCarte() {
 	// définir le moment du tirage
 	// dernierTirage = time();
 
-
 	// Choix de la phrase
-	// var randomNumber = getRandom(0,cardNumber);
 
 	document.getElementById('phrase').innerHTML = cards[cardNumber][1];
 	document.getElementById("illustration").src = "img/"+cards[cardNumber][0];
