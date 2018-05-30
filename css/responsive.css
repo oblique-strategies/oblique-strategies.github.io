@@ -22,9 +22,14 @@ p {
 	 * Layout: 
 	 * On passe en mode juxtaposé
 	 */
+	 
+	body {
+		overflow: hidden;
+	}
 
 	.carte {
 		display: flex;
+		height: 100%;
 	}
 
 	section {
