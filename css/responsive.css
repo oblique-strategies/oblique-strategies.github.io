@@ -75,11 +75,12 @@ p {
 @media screen and (min-width: 1900px) {
 
 	html {
-	 font-size: 2.2em; 
+		font-size: 2.2em; 
 	}
 
 	p {
-	 font-size: 3em; /* 16 x 2.2 x 3 = 105.6 */
+		font-size: 3em; /* 16 x 2.2 x 3 = 105.6 */
+		max-width: 8em;
 	}
 
 }
