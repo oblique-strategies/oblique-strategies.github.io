@@ -99,8 +99,6 @@ a:visited,
 	top: 0;
 	right: 100vw;
 	transition: right 1s ease-in-out;
-	display: flex;
-	flex-direction: column;
 }
 
 #myCanvas {
