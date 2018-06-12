@@ -61,11 +61,27 @@ var cards = [
 	  // ["nomdufichier.jpg","Noir et blanc"],
 
 //Groupe SaTe
-	  // ["nomdufichier.jpg","Demain"],
-	  // ["nomdufichier.jpg","Sirop de framboise"],
-	  // ["nomdufichier.jpg","La réponse se trouve au plafond"],
-	  // ["nomdufichier.jpg","Inspire toi de la météo"],
-	  // ["nomdufichier.jpg","Noir et blanc"],
+	  ["SaTe-1.jpg","Lance-toi"],
+	  ["SaTe-2.jpg","Empile!"],
+	  ["SaTe-3.jpg","Avance ou recule"],
+	  ["SaTe-4.jpg","Noir et blanc"],
+	  ["SaTe-5.jpg","Souviens-toi de ces douces soirées"],
+		["SaTe-6.jpg","Coup-de-sac"],
+		["SaTe-7.jpg","Demain"],
+		["SaTe-8.jpg","Sirop de framboise"],
+		["SaTe-9.jpg","Et si tu détenais déjà la solution?"],
+		["SaTe-10.jpg","1.61803398875"],
+		["SaTe-11.jpg","Extérieur"],
+		["SaTe-12.jpg","42"],
+		["SaTe-13.jpg","Plan B"],
+		["SaTe-14.jpg","Plus d'ambition et de créativité"],
+		["SaTe-15.jpg","La vie en couleur"],
+		["SaTe-16.jpg","Première intuition"],
+		["SaTe-17.jpg","Tire une nouvelle carte"],
+		["SaTe-18.jpg","La réponse se trouve au plafond"],
+		["SaTe-19.jpg","What?"],
+		["SaTe-20.jpg","Sors de ta bulle"],
+
 
 //Groupe SoMa
 	  ["SoMa_01.jpg","Ne complique pas les choses"],
