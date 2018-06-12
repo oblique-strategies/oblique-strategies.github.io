@@ -47,6 +47,7 @@ function premiereCarte() {
 */
 
 var cardNumber = 0;
+var cardMaximum = cards.length - 1;
 
 function shuffle(a) {
 	for (let i = a.length; i; i--) {
@@ -66,10 +67,18 @@ function tirerCarte() {
 	// dernierTirage = time();
 
 	// Choix de la phrase
-
-	document.getElementById('phrase').innerHTML = cards[cardNumber][1];
 	document.getElementById("illustration").src = "img/"+cards[cardNumber][0];
+	document.getElementById('phrase').innerHTML =        cards[cardNumber][1];
 
-	cardNumber++;
+	if ( cardNumber == cardMaximum ) {
+
+	// reset
+		cardNumber = 0;
+
+	} else {
+
+		cardNumber++;
+
+	}
 
 }
