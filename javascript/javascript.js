@@ -36,8 +36,6 @@ function premiereCarte() {
 
 	}, 1000);
 
-	event.preventDefault();
-
 } // fin de premiereCarte()
 
 
@@ -58,17 +56,59 @@ function shuffle(a) {
 
 shuffle(cards);
 
+var attente = [
+	15,
+	30,
+	60,
+ 120,
+ 240,
+ 480
+];
+
 function tirerCarte() {
 
-	// Déterminer le nombre de phrases
-	// var cardNumber = cards.length - 1;
+	var tempsActuel = new Date().getTime();
+	var dernierTirage = getCookie('heure');
 
-	// définir le moment du tirage
-	// dernierTirage = time();
+	if (dernierTirage) {
+
+	    // on compte le nombre de millisecondes 
+	    // écoulées depuis le dernier tirage:
+	    var tempsEcoule = tempsActuel - dernierTirage;
+
+	    var tempsAttente = attente[cardNumber]*1000;
+
+	    console.log('tempsAttente: '+tempsAttente);
+	    console.log('TempsEcoule: '+tempsEcoule);
+
+	    if ( tempsEcoule < tempsAttente ) {
+
+	    	document.getElementById('phrase').innerHTML = 'Pas si vite! Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + 'sec';
+
+	    } else { // le délai est écoulé
+
+	    	nouvelleCarte();
+
+	    }
+
+	} else { // le cookie n'est pas défini
+
+		nouvelleCarte();
+	
+	}
+
+}
+
+function nouvelleCarte() {
+
+	var tempsActuel = new Date().getTime();
+
+	var illustration = document.getElementById("illustration");
+	var phrase       = document.getElementById("phrase");
 
 	// Choix de la phrase
-	document.getElementById("illustration").src = "img/"+cards[cardNumber][0];
-	document.getElementById('phrase').innerHTML =        cards[cardNumber][1];
+	illustration.src = "img/"+cards[cardNumber][0];
+	phrase.innerHTML =        cards[cardNumber][1];
 
 	if ( cardNumber == cardMaximum ) {
 
@@ -80,5 +120,7 @@ function tirerCarte() {
 		cardNumber++;
 
 	}
+
+	setCookie('heure', tempsActuel, 8);
 
 }
