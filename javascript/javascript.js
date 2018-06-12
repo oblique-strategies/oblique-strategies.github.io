@@ -3,6 +3,26 @@
 ....................................................................................
 */
 
+function getRandom(min, max) {
+  return Math.random() * (max - min + 1) + min;
+}
+
+var i;
+for (i = 0; i < 30; i++) {
+  var circle = document.createElement('div');
+  circle.className = "circle";
+  circle.id = 'circle'+i;
+
+  var size = getRandom(2,10)+'vmax'
+  circle.style.width = size;
+  circle.style.height = size;
+
+	circle.style.top = getRandom(0, 100)+'vh';
+	circle.style.animationDelay = getRandom(0, 15)+'s';
+	//circle.style.transform = 'translateX('+getRandom(0, 100)+'vw)';
+  document.getElementById("canvas").appendChild(circle);
+};
+
 /*
  * Pour des détails sur le fonctionnement des animations, voir:
  * https://github.com/oblique-strategies/oblique-strategies.github.io/issues/1
@@ -14,7 +34,7 @@ startButton.addEventListener('click', premiereCarte, false);
 
 function premiereCarte() {
 
-	var myCanvas = document.getElementById('myCanvas');
+	var canvas = document.getElementById('canvas');
 	var intro    = document.getElementById('intro');
 	var frame    = document.getElementById('frame');
 
@@ -24,7 +44,7 @@ function premiereCarte() {
 
 	// Rendre transparente l'animation
 
-	myCanvas.className += " transparent";
+	canvas.className += " transparent";
 
 	// Ce qui suit va se produire après un délai de 1000 millisecondes.
 
@@ -33,6 +53,8 @@ function premiereCarte() {
 		intro.style.left = "100vw"; // Fait disparaître l'animation
 
 		frame.style.right = "0vw"; // Fait apparaître le contenu
+
+		canvas.parentNode.removeChild(canvas);
 
 	}, 1000);
 
