@@ -15,14 +15,14 @@ p {
 
 
 	html {
-	 font-size: 1.2em; 
+	 font-size: 1.2em;
 	}
 
 	/*
-	 * Layout: 
+	 * Layout:
 	 * On passe en mode juxtaposé
 	 */
-	 
+
 	body {
 		overflow: hidden;
 	}
@@ -36,22 +36,35 @@ p {
 		flex: 1 1;
 	}
 
+	.image {
+		height: 100%;
+		width: 100%
+		flex-grow: auto;
+		flex-shrink: 1;
+		flex-basis: 40%;
+	}
+
+	.texte{
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 60%;
+	}
 
 }
 
 @media screen and (min-width: 800px) {
-	
+
 	html {
-	 font-size: 1.6em; 
+	 font-size: 1.6em;
 	}
-	
+
 
 }
 
 @media screen and (min-width: 1000px) {
 
 	html {
-	 font-size: 1.8em; 
+	 font-size: 1.8em;
 	}
 
 	p {
@@ -63,7 +76,7 @@ p {
 @media screen and (min-width: 1400px) {
 
 	html {
-	 font-size: 2em; 
+	 font-size: 2em;
 	}
 
 	p {
@@ -75,7 +88,7 @@ p {
 @media screen and (min-width: 1900px) {
 
 	html {
-		font-size: 2.2em; 
+		font-size: 2.2em;
 	}
 
 	p {
