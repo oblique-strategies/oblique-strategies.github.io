@@ -133,3 +133,8 @@ a:visited,
 	transform: scale(1.1);
 	color: #4f12b1;
 }
+/* menu
+....................................................................................
+ */
+.retirer {
+	background-image: url(../picto/picto-fleche.svg);
