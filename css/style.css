@@ -71,6 +71,12 @@ ul {
 	justify-content: center;
 }
 
+a,
+a:visited,
+.texte {
+	color: #4f12b1;
+}
+
 /* Intro - écran de démarrage
 ....................................................................................
  */
@@ -93,8 +99,6 @@ ul {
 	top: 0;
 	right: 100vw;
 	transition: right 1s ease-in-out;
-	display: flex;
-	flex-direction: column;
 }
 
 #myCanvas {
@@ -109,10 +113,10 @@ ul {
 }
 
 .button {
-	background-color: rgba(255,255,255,0);
+/*	background-color: rgba(78, 17, 177, 0.31);*/
 	border: solid;
 	border-width: 6px;
-	color: white;
+	color: rgba(78, 17, 177, 0.2);
 	padding: 35px 35px;
 	text-align: center;
 	text-decoration: none;
@@ -121,6 +125,7 @@ ul {
 	position: absolute;
 	right: calc(50vw - 6em);
 	top: calc(50vh - 1.5em);
+	transition: all 0.2s ease-in-out;
 }
 
 .button:hover {

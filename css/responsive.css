@@ -3,8 +3,7 @@ img	{
 }
 
 p {
-	font-size: 2em;
-
+	font-size: 2em; /* 32px */
 }
 
 @media screen and (min-width: 600px) {
@@ -16,17 +15,21 @@ p {
 
 
 	html {
-	 font-size: 1.4em; /* rendre les polices plus petites pour mobile */
+	 font-size: 1.2em; 
 	}
 
-	p {
-		font-size: 2em;
-
+	/*
+	 * Layout: 
+	 * On passe en mode juxtaposé
+	 */
+	 
+	body {
+		overflow: hidden;
 	}
-
 
 	.carte {
 		display: flex;
+		height: 100%;
 	}
 
 	section {
@@ -36,15 +39,23 @@ p {
 
 }
 
+@media screen and (min-width: 800px) {
+	
+	html {
+	 font-size: 1.6em; 
+	}
+	
+
+}
+
 @media screen and (min-width: 1000px) {
 
 	html {
-	 font-size: 1.8em; /* rendre les polices plus petites pour mobile */
+	 font-size: 1.8em; 
 	}
 
 	p {
-	 font-size: 3em;
-
+	 font-size: 2.6em; /* 16 x 1.8 x 2.6 = 74.88px */
 	}
 
 }
@@ -52,11 +63,11 @@ p {
 @media screen and (min-width: 1400px) {
 
 	html {
-	 font-size: 2.2em; /* rendre les polices plus petites pour mobile */
+	 font-size: 2em; 
 	}
 
 	p {
-
+		font-size: 3em; /* 16 x 2 x 3 = 96px */
 	}
 
 }
@@ -64,12 +75,12 @@ p {
 @media screen and (min-width: 1900px) {
 
 	html {
-	 font-size: 2.2em; /* rendre les polices plus petites pour mobile */
+		font-size: 2.2em; 
 	}
 
 	p {
-	 font-size: 3em;
-
+		font-size: 3em; /* 16 x 2.2 x 3 = 105.6 */
+		max-width: 8em;
 	}
 
 }
