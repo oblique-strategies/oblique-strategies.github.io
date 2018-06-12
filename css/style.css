@@ -136,5 +136,17 @@ a:visited,
 /* menu
 ....................................................................................
  */
-.retirer {
+
+a.retirer {
+	display: block;
 	background-image: url(../picto/picto-fleche.svg);
+  min-width: 3rem;
+  min-height: 3rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+

@@ -1,1 +1,18 @@
-<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 290"><defs><style>.cls-1{fill:#141412;}.cls-2{fill:none;stroke:#141412;stroke-miterlimit:10;stroke-width:6px;}</style></defs><title>Picto flèche</title><polygon class="cls-1" points="69.49 142 54.96 191.45 78.16 167.07 112.46 171.23 69.49 142"/><path class="cls-2" d="M113.5,131.17A34.54,34.54,0,1,1,79,165.7"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="picto-fleche" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 124 124" style="enable-background:new 0 0 124 124;" xml:space="preserve">
+<style type="text/css">
+	.st0{
+    fill:#4f12b1;
+  }
+	.st1{
+  fill:none;
+  stroke:#4f12b1;
+  stroke-width:6;
+  stroke-miterlimit:10;
+}
+</style>
+<title>Picto flèche</title>
+<polygon class="st0" points="20.9,43.9 6.4,93.3 29.6,68.9 63.9,73.1 "/>
+<path class="st1" d="M64.9,33C84,33,99.5,48.5,99.5,67.5c0,19.1-15.4,34.6-34.5,34.6S30.4,86.7,30.4,67.6c0,0,0,0,0,0"/>
+</svg>
