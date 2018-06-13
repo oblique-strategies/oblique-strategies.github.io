@@ -60,6 +60,20 @@ shuffle(cards);
 
 function tirerCarte() {
 
+	// date
+	var dernierTirage = new Date();
+	//document.cookie = "heure = "+dernierTirage;
+	// console.log(dernierTirage);
+
+	setCookie('heure', "TEST" ,1);
+
+
+	var x = getCookie('heure');
+	console.log(x);
+
+
+
+
 	// Déterminer le nombre de phrases
 	// var cardNumber = cards.length - 1;
 
