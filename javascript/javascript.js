@@ -89,24 +89,6 @@ var attente = [
 
 function tirerCarte() {
 
-<<<<<<< HEAD
-	// date
-	var dernierTirage = new Date();
-	//document.cookie = "heure = "+dernierTirage;
-	// console.log(dernierTirage);
-
-	setCookie('heure', "TEST" ,1);
-
-
-	var x = getCookie('heure');
-	console.log(x);
-
-
-
-
-	// Déterminer le nombre de phrases
-	// var cardNumber = cards.length - 1;
-=======
 	var tempsActuel = new Date().getTime();
 	var dernierTirage = getCookie('heure');
 
@@ -118,11 +100,10 @@ function tirerCarte() {
 
 	    var tempsAttente = attente[cardNumber]*1000;
 
-	    console.log('tempsAttente: '+tempsAttente);
-	    console.log('TempsEcoule: '+tempsEcoule);
+	    // console.log('tempsAttente: '+tempsAttente);
+	    // console.log('TempsEcoule: '+tempsEcoule);
 
 	    if ( tempsEcoule < tempsAttente ) {
->>>>>>> 151d37c1d71df4e5a05f99ad79b937b3faaf12bd
 
 	    	document.getElementById('phrase').innerHTML = 'Pas si vite! Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + 'sec';
 
