@@ -2,7 +2,7 @@ img	{
 	height: 75vh;
 }
 
-p {
+.phrase {
 	font-size: 2em; /* 32px */
 }
 
@@ -44,7 +44,7 @@ p {
 		flex-basis: 40%;
 	}
 
-	.texte{
+	.texte {
 		flex-grow: 1;
 		flex-shrink: 1;
 		flex-basis: 60%;
@@ -67,7 +67,7 @@ p {
 	 font-size: 1.8em;
 	}
 
-	p {
+	.phrase, .button {
 	 font-size: 2.6em; /* 16 x 1.8 x 2.6 = 74.88px */
 	}
 
@@ -79,7 +79,7 @@ p {
 	 font-size: 2em;
 	}
 
-	p {
+	.phrase, .button {
 		font-size: 3em; /* 16 x 2 x 3 = 96px */
 	}
 
@@ -91,9 +91,9 @@ p {
 		font-size: 2.2em;
 	}
 
-	p {
+	.phrase, .button {
 		font-size: 3em; /* 16 x 2.2 x 3 = 105.6 */
-		max-width: 8em;
+		max-width: 12em;
 	}
 
 }

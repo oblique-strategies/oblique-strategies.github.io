@@ -51,8 +51,10 @@ function premiereCarte() {
 	setTimeout(function() {
 
 		intro.style.left = "100vw"; // Fait disparaître l'animation
+		intro.style.transition = "left 1s ease-in-out";
 
 		frame.style.right = "0vw"; // Fait apparaître le contenu
+		frame.style.transition = "right 1s ease-in-out";
 
 		canvas.parentNode.removeChild(canvas);
 

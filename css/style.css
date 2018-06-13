@@ -72,6 +72,11 @@ ul {
 	padding: 0 2em;
 }
 
+.phrase {
+  font-size: 2em; /* 32px */
+  margin: auto;
+}
+
 a,
 a:visited,
 .texte {
@@ -125,7 +130,6 @@ a:visited,
   width: 100%;
   top: 0;
   left: 0;
-  transition: left 1s ease-in-out;
 }
 
 #frame {
@@ -134,7 +138,6 @@ a:visited,
 	width: 100%;
 	top: 0;
 	right: 100vw;
-	transition: right 1s ease-in-out;
 }
 
 #canvas {
@@ -150,11 +153,11 @@ a:visited,
 .button {
 	background-color: rgba(255,255,255,0.3);
 	color: #4f12b1;
-	padding: 35px 35px;
+	padding: 0.7em 1em;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 50px;
+	font-size: 2em;
 	position: absolute;
 	right: calc(50vw - 6em);
 	top: calc(50vh - 1.5em);
