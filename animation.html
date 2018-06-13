@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  @keyframes mouvement {
+      0%   { 
+        left:-11vmax; 
+        opacity: 0;
+      }
+      50%   { 
+        opacity: 0.6; 
+      }
+      100% { 
+        left:calc(100% + 11vmax);
+        opacity: 0;
+      }
+  }
+
+  .circle {
+      width: 50px;
+      height: 50px;
+      left:-11vmax;
+      background-color: white;
+      opacity: 0;
+      position: absolute;
+      animation-name: mouvement;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      border-radius: 50%;
+  }
+
+  .circle:nth-child(odd) {
+    animation-duration: 7s;
+  }
+
+  .circle:nth-child(3n+3) {
+    animation-duration: 10s;
+  }
+
+  #intro {
+    position: absolute;
+    background-color: #4f12b1;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: left 1s ease-in-out;
+}
+</style>
+</head>
+<body>
+
+<header id="intro">
+</header>
+
+<script>
+
+function getRandom(min, max) {
+  return Math.random() * (max - min + 1) + min;
+}
+
+var i;
+for (i = 0; i < 30; i++) {
+  var circle = document.createElement('div');
+  circle.className = "circle";
+  circle.id = 'circle'+i;
+
+  var size = getRandom(2,10)+'vmax'
+  circle.style.width = size;
+  circle.style.height = size;
+
+	circle.style.top = getRandom(0, 100)+'vh';
+	circle.style.animationDelay = getRandom(0, 15)+'s';
+	//circle.style.transform = 'translateX('+getRandom(0, 100)+'vw)';
+  document.getElementById("intro").appendChild(circle);
+}
+</script>
+
+</body>
+</html>
