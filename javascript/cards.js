@@ -97,7 +97,7 @@ var cards = [
 		["SaTe-14.jpg","Plus d'ambition et de créativité"],
 		["SaTe-15.jpg","La vie en couleur"],
 		["SaTe-16.jpg","Première intuition"],
-		["SaTe-17.jpg","Tire une nouvelle carte"],
+// ["SaTe-17.jpg","Tire une nouvelle carte"],
 		["SaTe-18.jpg","La réponse se trouve au plafond"],
 		["SaTe-19.jpg","What?"],
 		["SaTe-20.jpg","Sors de ta bulle"],
