@@ -28,6 +28,13 @@ for (i = 0; i < 30; i++) {
  * https://github.com/oblique-strategies/oblique-strategies.github.io/issues/1
 */
 
+
+
+/*
+ * Tirage de la première carte
+....................................................................................
+*/
+
 var startButton = document.getElementById('start');
 
 startButton.addEventListener('click', premiereCarte, false);
@@ -71,15 +78,8 @@ function premiereCarte() {
 var cardNumber = 0;
 var cardMaximum = cards.length - 1;
 
-function shuffle(a) {
-	for (let i = a.length; i; i--) {
-		let j = Math.floor(Math.random() * i);
-		[a[i - 1], a[j]] = [a[j], a[i - 1]];
-	}
-}
-
-shuffle(cards);
-
+// Délai d'attente après chaque tirage
+// Sera multiplié pour obtenir des secondes / minutes
 var attente = [
 	15,
 	30,
@@ -91,31 +91,32 @@ var attente = [
 
 function tirerCarte() {
 
-	var tempsActuel = new Date().getTime();
-	var dernierTirage = getCookie('heure');
+	var tempsActuel = new Date().getTime(); // on relève le temps actuel
+	var dernierTirage = getCookie('heure'); // on vérifie l'heure du dernier tirage
 
 	if (dernierTirage) {
 
-	    // on compte le nombre de millisecondes 
+	    // on détermine le nombre de millisecondes 
 	    // écoulées depuis le dernier tirage:
+
 	    var tempsEcoule = tempsActuel - dernierTirage;
 
-	    var tempsAttente = attente[cardNumber]*1000;
+	    // on vérifie le temps d'attente imposé,
+	    // en fonction du nombre de cartes déjà tirées:
 
-	    // console.log('tempsAttente: '+tempsAttente);
-	    // console.log('TempsEcoule: '+tempsEcoule);
+	    var tempsAttente = attente[cardNumber]*1000;
 
 	    if ( tempsEcoule < tempsAttente ) {
 
 	    	document.getElementById('phrase').innerHTML = 'Pas si vite! Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + 'sec';
 
-	    } else { // le délai est écoulé
+	    } else { // le délai est écoulé, on peut tirer une carte
 
 	    	nouvelleCarte();
 
 	    }
 
-	} else { // le cookie n'est pas défini
+	} else { // le cookie n'est pas défini, c'est le premier tirage
 
 		nouvelleCarte();
 	
@@ -130,21 +131,21 @@ function nouvelleCarte() {
 	var illustration = document.getElementById("illustration");
 	var phrase       = document.getElementById("phrase");
 
-	// Choix de la phrase
+	// on affiche la phrase:
+
 	illustration.src = "img/"+cards[cardNumber][0];
 	phrase.innerHTML =        cards[cardNumber][1];
 
 	if ( cardNumber == cardMaximum ) {
-
-	// reset
-		cardNumber = 0;
+	
+		cardNumber = 0; // on a atteint la dernière carte - reset
 
 	} else {
 
-		cardNumber++;
+		cardNumber++; // on incrémente de 1
 
 	}
 
-	setCookie('heure', tempsActuel, 8);
+	setCookie('heure', tempsActuel, 8); // on enregistre l'heure du tirage
 
 }

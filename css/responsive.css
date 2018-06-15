@@ -2,10 +2,6 @@ img	{
 	height: 75vh;
 }
 
-.phrase {
-	font-size: 2em; /* 32px */
-}
-
 @media screen and (min-width: 600px) {
 
 
