@@ -12,8 +12,7 @@
         opacity: 0.6; 
       }
       100% { 
-        left:calc(100% + 60px);
-        left:calc(100% + 11vmax);
+        left: 100%;
         opacity: 0;
       }
   }
@@ -46,6 +45,7 @@
     background-color: #4f12b1;
     height: 100vh;
     width: 100%;
+    overflow: hidden;
     top: 0;
     left: 0;
     transition: left 1s ease-in-out;
@@ -67,14 +67,18 @@ var i;
 for (i = 0; i < 30; i++) {
   var circle = document.createElement('div');
   circle.className = "circle";
-  circle.id = 'circle'+i;
 
+  // Variation de la taille
   var size = getRandom(2,10)+'vmax'
   circle.style.width = size;
   circle.style.height = size;
 
+  // Position de départ
 	circle.style.top = getRandom(0, 100)+'vh';
+
+  // Delai de départ
 	circle.style.animationDelay = getRandom(0, 15)+'s';
+
   document.getElementById("intro").appendChild(circle);
 }
 </script>
