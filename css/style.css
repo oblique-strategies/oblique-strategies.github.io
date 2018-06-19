@@ -88,15 +88,15 @@ a:visited,
  */
 
 @keyframes mouvement {
-  0%   { 
+  0%   {
     left: -60px;
-    left:-11vmax; 
+    left:-11vmax;
     opacity: 0;
   }
-  50%   { 
-    opacity: 0.6; 
+  50%   {
+    opacity: 0.6;
   }
-  100% { 
+  100% {
     left: 100%;
     opacity: 0;
   }
@@ -190,4 +190,20 @@ a.retirer {
   color: transparent;
 }
 
+/* Message d'alerte Time Out
+....................................................................................
+ */
 
+ @font-face {
+ 	font-family: 'sangbleu empire';
+ 	font-weight: normal;
+ 	src: url('http://mailysdut.ch/fonts/sangbleu/Empire-Medium-WebS.woff2') format('woff2'),
+ 	url('http://mailysdut.ch/fonts/sangbleu/Empire-Medium-WebS.woff') format('woff');
+ }
+
+ .timeout{
+   text-align: center;
+	 color: #4f12b1;
+	 padding-bottom: 1em;
+	 max-width: 2em;
+ }

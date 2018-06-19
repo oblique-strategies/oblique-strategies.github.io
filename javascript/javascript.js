@@ -63,7 +63,7 @@ function premiereCarte() {
 		frame.style.right = "0vw"; // Fait apparaître le contenu
 		frame.style.transition = "right 1s ease-in-out";
 
-		canvas.parentNode.removeChild(canvas);
+	// 	canvas.parentNode.removeChild(canvas);
 
 	}, 1000);
 
@@ -94,9 +94,11 @@ function tirerCarte() {
 	var tempsActuel = new Date().getTime(); // on relève le temps actuel
 	var dernierTirage = getCookie('heure'); // on vérifie l'heure du dernier tirage
 
+	var timeout = document.getElementById('timeout');
+
 	if (dernierTirage) {
 
-	    // on détermine le nombre de millisecondes 
+	    // on détermine le nombre de millisecondes
 	    // écoulées depuis le dernier tirage:
 
 	    var tempsEcoule = tempsActuel - dernierTirage;
@@ -108,7 +110,14 @@ function tirerCarte() {
 
 	    if ( tempsEcoule < tempsAttente ) {
 
-	    	document.getElementById('phrase').innerHTML = 'Pas si vite! Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + 'sec';
+	    	// document.getElementById('phrase').innerHTML = 'Pas si vite! Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + 'sec';
+				//<p>Le compte-à-rebours n'est pas écoulé.</p>
+
+				timeout.innerHTML = 'Le compte-à-rebours n’est pas écoulé. Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + 'sec';
+				timeout.style.opacity="1";
+				setTimeout(function() {
+							timeout.style.opacity="0";
+				}, 5000);
 
 	    } else { // le délai est écoulé, on peut tirer une carte
 
@@ -119,7 +128,7 @@ function tirerCarte() {
 	} else { // le cookie n'est pas défini, c'est le premier tirage
 
 		nouvelleCarte();
-	
+
 	}
 
 }
@@ -137,7 +146,7 @@ function nouvelleCarte() {
 	phrase.innerHTML =        cards[cardNumber][1];
 
 	if ( cardNumber == cardMaximum ) {
-	
+
 		cardNumber = 0; // on a atteint la dernière carte - reset
 
 	} else {
