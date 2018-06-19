@@ -84,21 +84,40 @@ a:visited,
 .texte {
 	color: #4f12b1;
 }
+/* animation de la phrase*/
+@keyframes apparition {
+  0%   {
+    opacity: 0;
+		color: #ffb6c1;
+		transform: scale(0.8);
+  }
 
+  100% {
+    opacity: 1;
+		color: #4f12b1;
+		transform: scale(1);
+
+  }
+}
+.phrase{
+	animation-name: apparition;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+}
 /* Intro - écran de démarrage
 ....................................................................................
  */
 
 @keyframes mouvement {
-  0%   { 
+  0%   {
     left: -60px;
-    left:-11vmax; 
+    left:-11vmax;
     opacity: 0;
   }
-  50%   { 
-    opacity: 0.6; 
+  50%   {
+    opacity: 0.6;
   }
-  100% { 
+  100% {
     left: 100%;
     opacity: 0;
   }
