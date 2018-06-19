@@ -1,6 +1,6 @@
 var cards = [
 // Groupe DaRo
-	  ["DaRo_cartes1.jpg","Artiste pas facile à contacter"],
+//  ["DaRo_cartes1.jpg","Artiste pas facile à contacter"],
 	  ["DaRo_cartes2.jpg","Change de chaussettes"],
 	  ["DaRo_cartes3.jpg","Crée une forme au hasard"],
 	  ["DaRo_cartes4.jpg","Ecoute de la musique Zen"],

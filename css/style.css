@@ -63,10 +63,10 @@ body {
 	overflow-x: hidden;
 }
 
-.menu ul {
-	margin: 0;
-	list-style: none;
-	display: flex;
+a,
+a:visited,
+.texte {
+  color: #4f12b1;
 }
 
 .image {
@@ -199,7 +199,7 @@ body {
 ....................................................................................
  */
 
-a.retirer {
+.retirer {
 	display: block;
 	background-color: rgba(255,255,255,0.5);
 	background-image: url('../picto/picto-fleche.svg');
@@ -207,7 +207,8 @@ a.retirer {
   min-height: 3rem;
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 80%;
+  background-position: 50%;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -281,7 +282,7 @@ a.retirer {
   padding-bottom: 56.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
-  border-bottom: 1em solid #fff;
+  border-bottom: 1.5em solid #fff;
 }
 
 .video iframe {
