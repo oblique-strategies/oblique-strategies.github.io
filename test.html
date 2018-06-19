@@ -17,17 +17,33 @@
 
   }
 }
-p{
 
-	font-size: 10em;
+
+p {
+	font-size: 3em;
 	color: #4f12b1;
-	animation-name: isidore;
+	/*animation-name: isidore;*/
 	animation-duration: 3s;
 	animation-timing-function: ease-in-out;
 }
 </style>
 </head>
 <body>
-		<p> Je suis Isidore </p>
+		<p id="phrase">Je suis Isidore </p>
+    <a href="#" onclick="animateMe()">animer</a>
+    <script>
+      
+      function animateMe() {
+
+        var phrase = document.getElementById('phrase');
+
+        phrase.style.animationName = "none";
+        void phrase.offsetWidth;
+        phrase.style.animationName = "isidore";
+
+
+      }
+
+    </script>
 </body>
 </html>
