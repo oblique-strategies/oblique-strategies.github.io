@@ -39,35 +39,45 @@ var startButton = document.getElementById('start');
 
 startButton.addEventListener('click', premiereCarte, false);
 
-function premiereCarte() {
+function premiereCarte(e) {
+
+	e.preventDefault();
 
 	var canvas = document.getElementById('canvas');
 	var intro    = document.getElementById('intro');
 	var frame    = document.getElementById('frame');
 
-	// Tirer une première carte
-
-	tirerCarte();
-
 	// Rendre transparente l'animation
 
 	canvas.className += " transparent";
+	
+	cacherIntro();
+	
+	// Tirer une première carte
+	
+		tirerCarte();
+	
+} // fin de premiereCarte()
+
+
+
+function cacherIntro() {
 
 	// Ce qui suit va se produire après un délai de 1000 millisecondes.
-
-	setTimeout(function() {
-
-		intro.style.left = "100vw"; // Fait disparaître l'animation
-		intro.style.transition = "left 1s ease-in-out";
-
-		frame.style.right = "0vw"; // Fait apparaître le contenu
-		frame.style.transition = "right 1s ease-in-out";
-
-		canvas.parentNode.removeChild(canvas);
-
-	}, 1000);
-
-} // fin de premiereCarte()
+	
+		setTimeout(function() {
+	
+			intro.style.left = "100vw"; // Fait disparaître l'animation
+			intro.style.transition = "left 1s ease-in-out";
+	
+			frame.style.right = "0vw"; // Fait apparaître le contenu
+			frame.style.transition = "right 1s ease-in-out";
+	
+			canvas.parentNode.removeChild(canvas);
+	
+		}, 1000);
+		
+}
 
 
 /*
@@ -149,3 +159,59 @@ function nouvelleCarte() {
 	setCookie('heure', tempsActuel, 8); // on enregistre l'heure du tirage
 
 }
+
+
+/*
+ * Chargement Informations
+....................................................................................
+*/
+
+var aboutButton = document.getElementById('infos');
+
+aboutButton.addEventListener('click', showAbout, false);
+
+function showAbout(e) {
+			
+	e.preventDefault();
+			
+	// Charger le contenu...
+	
+	var request = new XMLHttpRequest();
+	
+	// request.open('GET', '/somepage', true);
+	request.open('Get', 'about/');
+	
+	request.onload = function() {
+	  if (request.status >= 200 && request.status < 400) {
+			
+	    var resp = request.responseText;
+			
+			var parser = new DOMParser();
+			doc = parser.parseFromString(resp, "text/html");
+			var remainder = doc.getElementById("about").innerHTML;
+			
+			// var requestContent = resp.querySelector('#about');
+	    // document.querySelector('#div').innerHTML = resp;
+			
+			// console.log(remainder);
+			
+			intro.innerHTML = remainder;
+			
+			intro.className += " about-text";
+			
+			intro.style.left = "0px";
+			intro.style.overflowY = "auto";
+			
+			frame.style.right = "100vw";
+			
+	  }
+	};
+	
+	request.send();
+			
+	// on remet à l'écran la page #intro
+	
+
+	
+}
+
