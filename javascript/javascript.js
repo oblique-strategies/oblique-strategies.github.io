@@ -83,6 +83,9 @@ function cacherIntro(delay) {
 ....................................................................................
 */
 
+var illustration = document.getElementById("illustration");
+var phrase       = document.getElementById("phrase");
+
 var cardNumber = 0;
 var cardMaximum = cards.length - 1;
 
@@ -121,12 +124,20 @@ function tirerCarte() {
 				timeout.innerHTML = 'Le compte-à-rebours n’est pas écoulé. Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + ' sec';
 				timeout.style.opacity="1";
 				setTimeout(function() {
-							timeout.style.opacity="0";
+					timeout.style.opacity="0";
 				}, 5000);
 
 	    } else { // le délai est écoulé, on peut tirer une carte
 
-	    	nouvelleCarte();
+	    	// D'abord on masque la phrase
+	    	illustration.style.opacity = "0";
+	    	phrase.style.opacity = "0";
+
+	    	phrase.style.transform = "scale(0.8)";
+
+	    	setTimeout(function() {
+					nouvelleCarte();
+				}, 1000);
 
 	    }
 
@@ -142,13 +153,18 @@ function nouvelleCarte() {
 
 	var tempsActuel = new Date().getTime();
 
-	var illustration = document.getElementById("illustration");
-	var phrase       = document.getElementById("phrase");
+	
 
 	// on affiche la phrase:
 
 	illustration.src = "img/"+cards[cardNumber][0];
 	phrase.innerHTML =        cards[cardNumber][1];
+
+ 	phrase.style.opacity = "1";
+ 	phrase.style.transform = "scale(1)";
+
+ 	illustration.style.opacity = "1";
+ 	illustration.style.transform = "scale(1)";
 
 	if ( cardNumber == cardMaximum ) {
 

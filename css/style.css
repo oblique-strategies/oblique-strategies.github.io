@@ -95,32 +95,16 @@ body {
   font-size: 2em; /* 32px */
   margin: auto;
 	padding: 1em 0;
-	animation-name: apparition;
-	animation-duration: 3s;
-	animation-timing-function: ease-in-out;
-
 }
 
-a,
-a:visited,
-.texte {
-	color: #4f12b1;
+.phrase,
+.illustration {
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
 }
-/* animation de la phrase */
-@keyframes apparition {
-  0%   {
-    opacity: 0;
-		color: #ffb6c1;
-		transform: scale(0.8);
-  }
 
-  100% {
-    opacity: 1;
-		color: #4f12b1;
-		transform: scale(1);
 
-  }
-}
+
 
 /* Intro - écran de démarrage
 ....................................................................................
