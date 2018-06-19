@@ -228,9 +228,13 @@ a.retirer {
 
  .timeout{
    text-align: center;
-	 color: #4f12b1;
+	 color: white;
 	 padding-bottom: 1em;
-	 max-width: 2em;
+	 max-width: 15em;
+	 margin: auto;
+	 border: 2px;
+	 border-radius: 25px;
+	 background: #4f12b1;
  }
 
 
