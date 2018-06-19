@@ -51,7 +51,7 @@ function premiereCarte(e) {
 
 	canvas.className += " transparent";
 
-	cacherIntro();
+	cacherIntro(1000);
 
 	// Tirer une première carte
 
@@ -59,7 +59,7 @@ function premiereCarte(e) {
 
 } // fin de premiereCarte()
 
-function cacherIntro() {
+function cacherIntro(delay) {
 
 	// Ce qui suit va se produire après un délai de 1000 millisecondes.
 
@@ -73,7 +73,7 @@ function cacherIntro() {
 
 			//canvas.parentNode.removeChild(canvas);
 
-		}, 1000);
+		}, delay);
 
 }
 
