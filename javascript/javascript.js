@@ -49,7 +49,7 @@ function premiereCarte(e) {
 
 	// Rendre transparente l'animation
 
-	canvas.className += " transparent";
+	canvas.classList.add("transparent");
 
 	cacherIntro(1000);
 
@@ -72,6 +72,7 @@ function cacherIntro(delay) {
 			frame.style.transition = "right 1s ease-in-out";
 
 			//canvas.parentNode.removeChild(canvas);
+			intro.classList.remove("about-text");
 
 		}, delay);
 
@@ -204,7 +205,7 @@ function showAbout(e) {
 
 			intro.innerHTML = remainder;
 
-			intro.className += " about-text";
+			intro.classList.add("about-text");
 
 			intro.style.left = "0px";
 			intro.style.overflowY = "auto";
