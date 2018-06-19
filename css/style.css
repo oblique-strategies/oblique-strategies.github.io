@@ -26,14 +26,17 @@
 
 h1, h2 {
 	font-family: "sangbleu empire", helvetica, sans-serif;
+
 }
 
 h2 {
 	font-weight: normal;
+
 }
 
 body, p {
 	font-family: "sangbleu sunrise", helvetica, sans-serif;
+
 }
 
 /* Eléments de base
@@ -71,18 +74,38 @@ img	{
 	flex-direction: column;
 	justify-content: center;
 	padding: 0 2em;
+
 }
 
 .phrase {
   font-size: 2em; /* 32px */
   margin: auto;
 	padding: 1em 0;
+	animation-name: apparition;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+
 }
 
 a,
 a:visited,
 .texte {
 	color: #4f12b1;
+}
+/* animation de la phrase */
+@keyframes apparition {
+  0%   {
+    opacity: 0;
+		color: #ffb6c1;
+		transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+		color: #4f12b1;
+		transform: scale(1);
+
+  }
 }
 
 /* Intro - écran de démarrage
@@ -191,6 +214,25 @@ a.retirer {
   text-shadow: none;
   color: transparent;
 }
+
+/* Message d'alerte Time Out
+....................................................................................
+ */
+
+ @font-face {
+ 	font-family: 'sangbleu empire';
+ 	font-weight: normal;
+ 	src: url('http://mailysdut.ch/fonts/sangbleu/Empire-Medium-WebS.woff2') format('woff2'),
+ 	url('http://mailysdut.ch/fonts/sangbleu/Empire-Medium-WebS.woff') format('woff');
+ }
+
+ .timeout{
+   text-align: center;
+	 color: #4f12b1;
+	 padding-bottom: 1em;
+	 max-width: 2em;
+ }
+
 
 /* about
 ....................................................................................
