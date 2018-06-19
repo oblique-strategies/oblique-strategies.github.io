@@ -90,15 +90,15 @@ a:visited,
  */
 
 @keyframes mouvement {
-  0%   { 
+  0%   {
     left: -60px;
-    left:-11vmax; 
+    left:-11vmax;
     opacity: 0;
   }
-  50%   { 
-    opacity: 0.6; 
+  50%   {
+    opacity: 0.6;
   }
-  100% { 
+  100% {
     left: 100%;
     opacity: 0;
   }
@@ -196,8 +196,40 @@ a.retirer {
 ....................................................................................
  */
 
+ a.close-me {
+ 	display: block;
+ 	background-color: rgba(255,255,255,0.5);
+ 	background-image: url('../picto/picto_close.svg');
+   min-width: 3rem;
+   min-height: 3rem;
+   border-radius: 50%;
+   background-repeat: no-repeat;
+   background-size: contain;
+   font: 0/0 a;
+   text-shadow: none;
+   color: transparent;
+ }
+
 #intro .texte {
 	display: block;
+}
+
+.team {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.team li {
+	list-style: none;
+	display: inline-flex;
+	flex: 1 1;
+	border: 1px Solid;
+}
+
+.team img {
+	max-width: 3em;
+	display: flex;
 }
 
 /* Sharing Buttons
