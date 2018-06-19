@@ -55,7 +55,7 @@ function premiereCarte(e) {
 
 	// Tirer une première carte
 
-		tirerCarte();
+	tirerCarte();
 
 } // fin de premiereCarte()
 
@@ -71,7 +71,6 @@ function cacherIntro(delay) {
 			frame.style.right = "0vw"; // Fait apparaître le contenu
 			frame.style.transition = "right 1s ease-in-out";
 
-			//canvas.parentNode.removeChild(canvas);
 			intro.classList.remove("about-text");
 
 		}, delay);
@@ -119,10 +118,7 @@ function tirerCarte() {
 
 	    if ( tempsEcoule < tempsAttente ) {
 
-	    	// document.getElementById('phrase').innerHTML = 'Pas si vite! Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + 'sec';
-				//<p>Le compte-à-rebours n'est pas écoulé.</p>
-
-				timeout.innerHTML = 'Le compte-à-rebours n’est pas écoulé. Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + 'sec';
+				timeout.innerHTML = 'Le compte-à-rebours n’est pas écoulé. Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + ' sec';
 				timeout.style.opacity="1";
 				setTimeout(function() {
 							timeout.style.opacity="0";

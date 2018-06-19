@@ -25,7 +25,7 @@ function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';  
 }
 
-eraseCookie('heure');
+// eraseCookie('heure');
 
 // setCookie('ppkcookie','testcookie',7);
 
