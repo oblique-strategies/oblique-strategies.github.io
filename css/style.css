@@ -26,14 +26,17 @@
 
 h1, h2 {
 	font-family: "sangbleu empire", helvetica, sans-serif;
+
 }
 
 h2 {
 	font-weight: normal;
+
 }
 
 body, p {
 	font-family: "sangbleu sunrise", helvetica, sans-serif;
+
 }
 
 /* Eléments de base
@@ -71,12 +74,17 @@ img	{
 	flex-direction: column;
 	justify-content: center;
 	padding: 0 2em;
+
 }
 
 .phrase {
   font-size: 2em; /* 32px */
   margin: auto;
 	padding: 1em 0;
+	animation-name: apparition;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+
 }
 
 a,
@@ -84,7 +92,7 @@ a:visited,
 .texte {
 	color: #4f12b1;
 }
-/* animation de la phrase*/
+/* animation de la phrase */
 @keyframes apparition {
   0%   {
     opacity: 0;
@@ -99,11 +107,7 @@ a:visited,
 
   }
 }
-.phrase{
-	animation-name: apparition;
-	animation-duration: 3s;
-	animation-timing-function: ease-in-out;
-}
+
 /* Intro - écran de démarrage
 ....................................................................................
  */
