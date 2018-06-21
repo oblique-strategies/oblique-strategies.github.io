@@ -1,4 +1,21 @@
 /*
+/*
+ * Tester variable URL
+....................................................................................
+
+ // On teste si le mode démo est activé
+
+*/
+
+var modeDemo = window.location.hash;
+
+if ( modeDemo == "#demo" ) {
+
+	eraseCookie('heure');
+	eraseCookie('phrase');
+	eraseCookie('illustration');
+
+}
  * Animation de l'intro
 ....................................................................................
 */
@@ -191,7 +208,17 @@ function nouvelleCarte() {
 
 	}
 
-	setCookie('heure', tempsActuel, 8); // on enregistre l'heure du tirage
+	// Enregistrement des cookies
+
+	if ( modeDemo != "#demo" ) {
+
+		setCookie('heure', tempsActuel, 8); // l'heure du tirage
+		setCookie('illustration', illustration.src, 8);
+		setCookie('phrase', phrase.innerHTML, 8);
+
+	}
+
+}
 
 }
 
