@@ -26,10 +26,7 @@ function eraseCookie(name) {
 }
 
 // eraseCookie('heure');
+// eraseCookie('phrase');
+// eraseCookie('illustration');
 
-// setCookie('ppkcookie','testcookie',7);
 
-// var x = getCookie('ppkcookie');
-// if (x) {
-//     console.log('cookie: '+x);
-// }

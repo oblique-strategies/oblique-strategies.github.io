@@ -1,4 +1,19 @@
 /*
+ * Définition de variables
+....................................................................................
+*/
+
+var canvas = document.getElementById('canvas');
+var intro  = document.getElementById('intro');
+var frame  = document.getElementById('frame');
+
+var illustration = document.getElementById("illustration");
+var phrase       = document.getElementById("phrase");
+var timeout      = document.getElementById('timeout');
+
+var cardNumber = 0;
+var cardMaximum = cards.length - 1;
+
 /*
  * Tester variable URL
 ....................................................................................
@@ -16,6 +31,33 @@ if ( modeDemo == "#demo" ) {
 	eraseCookie('illustration');
 
 }
+
+/*
+ * Evenements
+....................................................................................
+*/
+
+var startButton = document.getElementById('start');
+var reloadButton = document.getElementById('retirer');
+var aboutButton = document.getElementById('infos');
+
+startButton.addEventListener('click', premiereCarte, false);
+reloadButton.addEventListener('click', tirerCarte, false);
+aboutButton.addEventListener('click', showAbout, false);
+
+// Délai d'attente après chaque tirage
+// Sera multiplié pour obtenir des secondes / minutes
+var attente = [
+	15,
+	30,
+	60,
+ 120,
+ 240,
+ 480
+];
+
+
+/*
  * Animation de l'intro
 ....................................................................................
 */
@@ -36,8 +78,8 @@ for (i = 0; i < 30; i++) {
 
 	circle.style.top = getRandom(0, 100)+'vh';
 	circle.style.animationDelay = getRandom(0, 15)+'s';
-	//circle.style.transform = 'translateX('+getRandom(0, 100)+'vw)';
-  document.getElementById("canvas").appendChild(circle);
+
+  canvas.appendChild(circle);
 };
 
 /*
@@ -45,36 +87,6 @@ for (i = 0; i < 30; i++) {
  * https://github.com/oblique-strategies/oblique-strategies.github.io/issues/1
 */
 
-
-
-/*
- * Tirage de la première carte
-....................................................................................
-*/
-
-var startButton = document.getElementById('start');
-
-startButton.addEventListener('click', premiereCarte, false);
-
-function premiereCarte(e) {
-
-	e.preventDefault();
-
-	var canvas = document.getElementById('canvas');
-	var intro    = document.getElementById('intro');
-	var frame    = document.getElementById('frame');
-
-	// Rendre transparente l'animation
-
-	canvas.classList.add("transparent");
-
-	cacherIntro(1000);
-
-	// Tirer une première carte
-
-	tirerCarte();
-
-} // fin de premiereCarte()
 
 function cacherIntro(delay) {
 
@@ -100,29 +112,58 @@ function cacherIntro(delay) {
 ....................................................................................
 */
 
-var illustration = document.getElementById("illustration");
-var phrase       = document.getElementById("phrase");
 
-var cardNumber = 0;
-var cardMaximum = cards.length - 1;
+/*
+ * Tirage de la première carte
+....................................................................................
+*/
 
-// Délai d'attente après chaque tirage
-// Sera multiplié pour obtenir des secondes / minutes
-var attente = [
-	15,
-	30,
-	60,
- 120,
- 240,
- 480
-];
+function premiereCarte(e) {
 
-function tirerCarte() {
+	e.preventDefault();
+
+	canvas.classList.add("transparent"); // Rendre transparente l'animation
+
+	cacherIntro(1000);
+
+	setTimeout(function() {
+		// On supprime #canvas, pour être certain 
+		// que l'animation ne consomme pas de puissance de calcul.
+		canvas.parentNode.removeChild(canvas);
+	}, 1000);
+
+	// Vérifier si la dernière carte est encore en mémoire.
+
+	var derniereCarte = getCookie('phrase');
+
+	if (derniereCarte) {
+
+		illustration.src = getCookie('illustration');
+		phrase.innerHTML = derniereCarte;
+
+		setTimeout(function() {
+			afficherPhrase();
+		}, 2000);
+
+	} else {
+
+		nouvelleCarte();
+
+	}
+
+} // fin de premiereCarte()
+
+/*
+ * Tirage de nouvelle carte
+....................................................................................
+*/
+
+function tirerCarte(e) {
+
+	e.preventDefault();
 
 	var tempsActuel = new Date().getTime(); // on relève le temps actuel
 	var dernierTirage = getCookie('heure'); // on vérifie l'heure du dernier tirage
-
-	var timeout = document.getElementById('timeout');
 
 	if (dernierTirage) {
 
@@ -134,7 +175,7 @@ function tirerCarte() {
 	    // on vérifie le temps d'attente imposé,
 	    // en fonction du nombre de cartes déjà tirées:
 
-	    var tempsAttente = attente[cardNumber]*1000;
+	    var tempsAttente = attente[cardNumber]*1000*60;
 
 	    if ( tempsEcoule < tempsAttente ) {
 
@@ -156,15 +197,15 @@ function tirerCarte() {
 				
 
 				setTimeout(function() {
+					timeout.style.transitionDuration = "0.5s";
 					timeout.style.opacity="0";
 				}, 5000);
 
 	    } else { // le délai est écoulé, on peut tirer une carte
 
-	    	// D'abord on masque la phrase
+	    	// D'abord, on masque la phrase
 	    	illustration.style.opacity = "0";
 	    	phrase.style.opacity = "0";
-
 	    	phrase.style.transform = "scale(0.8)";
 
 	    	setTimeout(function() {
@@ -185,19 +226,13 @@ function nouvelleCarte() {
 
 	var tempsActuel = new Date().getTime();
 
-	
-
 	// on affiche la phrase:
 
 	illustration.src = "img/"+cards[cardNumber][0];
 	phrase.innerHTML =        cards[cardNumber][1];
 
- 	phrase.style.opacity = "1";
- 	phrase.style.transform = "scale(1)";
-
- 	illustration.style.opacity = "1";
- 	illustration.style.transform = "scale(1)";
-
+	afficherPhrase();
+ 	
 	if ( cardNumber == cardMaximum ) {
 
 		cardNumber = 0; // on a atteint la dernière carte - reset
@@ -220,6 +255,14 @@ function nouvelleCarte() {
 
 }
 
+function afficherPhrase() {
+
+	phrase.style.opacity = "1";
+ 	phrase.style.transform = "scale(1)";
+
+ 	illustration.style.opacity = "1";
+ 	illustration.style.transform = "scale(1)";
+
 }
 
 
@@ -228,9 +271,6 @@ function nouvelleCarte() {
 ....................................................................................
 */
 
-var aboutButton = document.getElementById('infos');
-
-aboutButton.addEventListener('click', showAbout, false);
 
 function showAbout(e) {
 
@@ -252,11 +292,6 @@ function showAbout(e) {
 			doc = parser.parseFromString(resp, "text/html");
 			var remainder = doc.getElementById("about").innerHTML;
 
-			// var requestContent = resp.querySelector('#about');
-	    // document.querySelector('#div').innerHTML = resp;
-
-			// console.log(remainder);
-
 			intro.innerHTML = remainder;
 
 			intro.classList.add("about-text");
@@ -270,9 +305,5 @@ function showAbout(e) {
 	};
 
 	request.send();
-
-	// on remet à l'écran la page #intro
-
-
 
 }
