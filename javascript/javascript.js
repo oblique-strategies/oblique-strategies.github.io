@@ -121,8 +121,23 @@ function tirerCarte() {
 
 	    if ( tempsEcoule < tempsAttente ) {
 
-				timeout.innerHTML = 'Le compte-à-rebours n’est pas écoulé. Prochain tirage possible dans '+ Math.floor((tempsAttente - tempsEcoule)/1000) + ' sec';
-				timeout.style.opacity="1";
+	    	var tempsDiff = tempsAttente - tempsEcoule;
+
+	    	var tempsMessage = Math.floor(tempsDiff/60000) + ' minutes';
+
+	    	if ( tempsDiff < ( 120000 ) ) {
+	    		var tempsMessage = 'une minute';
+	    	}
+
+	    	if ( tempsDiff < ( 60*000 ) ) {
+	    		var tempsMessage = 'quelques secondes';
+	    	}
+
+				timeout.innerHTML = '<p>Le compte-à-rebours n’est pas écoulé. Prochain tirage possible dans '+ tempsMessage + '.</p>';
+				timeout.style.transitionDuration = "0s";
+				timeout.style.opacity = "1";
+				
+
 				setTimeout(function() {
 					timeout.style.opacity="0";
 				}, 5000);
