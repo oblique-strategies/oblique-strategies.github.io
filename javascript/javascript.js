@@ -29,6 +29,17 @@ if ( modeDemo == "#demo" ) {
 	eraseCookie('heure');
 	eraseCookie('phrase');
 	eraseCookie('illustration');
+	eraseCookie('compteur');
+
+} else {
+
+	var lastNumber = getCookie('compteur');
+
+	if ( lastNumber ) {
+
+		var cardNumber = lastNumber;
+
+	}
 
 }
 
@@ -48,6 +59,7 @@ aboutButton.addEventListener('click', showAbout, false);
 // Délai d'attente après chaque tirage
 // Sera multiplié pour obtenir des secondes / minutes
 var attente = [
+	0,
 	15,
 	30,
 	60,
@@ -248,6 +260,7 @@ function nouvelleCarte() {
 	if ( modeDemo != "#demo" ) {
 
 		setCookie('heure', tempsActuel, 8); // l'heure du tirage
+		setCookie('compteur', cardNumber, 8);
 		setCookie('illustration', illustration.src, 8);
 		setCookie('phrase', phrase.innerHTML, 8);
 
