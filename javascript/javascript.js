@@ -52,9 +52,15 @@ var startButton = document.getElementById('start');
 var reloadButton = document.getElementById('retirer');
 var aboutButton = document.getElementById('infos');
 
-startButton.addEventListener('click', premiereCarte, false);
-reloadButton.addEventListener('click', tirerCarte, false);
-aboutButton.addEventListener('click', showAbout, false);
+if (startButton) {
+	startButton.addEventListener('click', premiereCarte, false);
+}
+if (reloadButton) {
+	reloadButton.addEventListener('click', tirerCarte, false);
+}
+if (aboutButton) {
+	aboutButton.addEventListener('click', showAbout, false);
+}
 
 // Délai d'attente après chaque tirage
 // Sera multiplié pour obtenir des secondes / minutes
@@ -78,21 +84,25 @@ function getRandom(min, max) {
   return Math.random() * (max - min + 1) + min;
 }
 
-var i;
-for (i = 0; i < 30; i++) {
-  var circle = document.createElement('div');
-  circle.className = "circle";
-  circle.id = 'circle'+i;
+if (canvas) {
 
-  var size = getRandom(2,10)+'vmax'
-  circle.style.width = size;
-  circle.style.height = size;
+	var i;
+	for (i = 0; i < 30; i++) {
+	  var circle = document.createElement('div');
+	  circle.className = "circle";
+	  circle.id = 'circle'+i;
 
-	circle.style.top = getRandom(0, 100)+'vh';
-	circle.style.animationDelay = getRandom(0, 15)+'s';
+	  var size = getRandom(2,10)+'vmax'
+	  circle.style.width = size;
+	  circle.style.height = size;
 
-  canvas.appendChild(circle);
-};
+		circle.style.top = getRandom(0, 100)+'vh';
+		circle.style.animationDelay = getRandom(0, 15)+'s';
+
+	  canvas.appendChild(circle);
+	};
+
+}
 
 /*
  * Pour des détails sur le fonctionnement des animations, voir:
