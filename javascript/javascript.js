@@ -65,13 +65,13 @@ if (aboutButton) {
 // Délai d'attente après chaque tirage
 // Sera multiplié pour obtenir des secondes / minutes
 var attente = [
-	0,
-	15,
-	30,
-	60,
- 120,
- 240,
- 480
+  0,
+  16,
+  31,
+  61,
+ 121,
+ 241,
+ 481
 ];
 
 
