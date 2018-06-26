@@ -109,9 +109,26 @@ if (canvas) {
  * https://github.com/oblique-strategies/oblique-strategies.github.io/issues/1
 */
 
+function closeMe() {
+	
+//	return false;
+//	
+//	e.preventDefault();
+//	
+//	console.log("clicked");
+		
+	cacherIntro(100);
+	
+	
+}
+
+
 
 function cacherIntro(delay) {
-
+	
+		// return false;
+	
+	
 	// Ce qui suit va se produire après un délai de 1000 millisecondes.
 
 		setTimeout(function() {
