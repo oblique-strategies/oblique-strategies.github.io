@@ -199,7 +199,8 @@ a:visited,
 ....................................................................................
  */
 
-.retirer {
+.retirer, 
+.infos {
 	display: block;
 	background-color: rgba(255,255,255,0.5);
 	background-image: url('../picto/picto-fleche.svg');
@@ -212,6 +213,12 @@ a:visited,
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
+}
+
+.infos {
+	background-image: url('../picto/picto-info.svg');
+	background-size: 100%;
+	background-position: 0;
 }
 
 /* Message d'alerte Time Out
