@@ -63,7 +63,7 @@ var cards = [
 ["NaMi 13.jpg","N’aie pas peur des clichés"],
 ["NaMi 15.jpg","1+1=3 Apelle ton collègue graphiste"],
 ["NaMi 17.jpg","Rajoute de la couleur"],
-["NaMi 19.jpg","Prends la premiere fonte Open Source et joue avec"],
+["NaMi 19.jpg","Prends la première fonte Open Source et joue avec"],
 ["NaMi 21.jpg","Laisse ton projet reposer et reviens-y trois jours plus tard"],
 ["NaMi 23.jpg","Prends un café et mets ton doigt dedans"],
 ["NaMi 25.jpg","Confronte-toi aux avis extérieurs"],
