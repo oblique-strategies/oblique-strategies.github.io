@@ -110,15 +110,8 @@ if (canvas) {
 */
 
 function closeMe() {
-	
-//	return false;
-//	
-//	e.preventDefault();
-//	
-//	console.log("clicked");
 		
 	cacherIntro(100);
-	
 	
 }
 
