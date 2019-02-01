@@ -184,7 +184,7 @@ a:visited,
 	display: inline-block;
 	font-size: 2em;
 	position: absolute;
-	right: calc(50vw - 6em);
+	right: calc(50vw - 6.3em);
 	top: calc(50vh - 1.5em);
 	transition: all 0.2s ease-in-out;
 }
